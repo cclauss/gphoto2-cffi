@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+
 import sys
 
 sys.path.insert(0, '../')
@@ -13,7 +15,7 @@ class Mock(object):
 
     @classmethod
     def __getattr__(cls, name):
-        print "Getting mock: ", name
+        print("Getting mock: ", name)
         if name in ('__file__', '__path__'):
             return '/dev/null'
         # Special case for CFFI
