@@ -546,7 +546,7 @@ class Camera(object):
     def __init__(self, bus=None, device=None, lazy=False, _abilities=None):
         self._logger = logging.getLogger()
 
-        # NOTE: It is not strictly neccessary to create a context for every
+        # NOTE: It is not strictly necessary to create a context for every
         #       device, however it is significantly (>500ms) faster when
         #       actions are to be performed simultaneously.
         self._ctx = lib.gp_context_new()
@@ -809,7 +809,7 @@ class Camera(object):
 
     def _wait_for_event(self, event_type=None, duration=0):
         if event_type is None and not duration:
-            raise ValueError("Please specifiy either `event_type` or "
+            raise ValueError("Please specify either `event_type` or "
                              "`duration!`")
         start_time = time.time()
         self.__event_data_p[0] = ffi.NULL
